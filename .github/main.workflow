@@ -4,12 +4,14 @@ workflow "Testing project" {
 }
 
 action "Install dependencies" {
-  uses = "actions/npm@master"
+  uses = "docker://bycedric/ci-expo"
   args = "ci"
+  runs = "npm"
 }
 
 action "Test code" {
-  uses = "actions/npm@master"
+  uses = "docker://bycedric/ci-expo"
   needs = ["Install dependencies"]
   args = "run test-ci"
+  runs = "npm"
 }
