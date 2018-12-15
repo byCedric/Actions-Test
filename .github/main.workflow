@@ -1,17 +1,9 @@
 workflow "Testing project" {
   on = "push"
-  resolves = ["Test code"]
+  resolves = ["GitHub Action for npm"]
 }
 
-action "Install dependencies" {
-  uses = "docker://bycedric/ci-expo"
+action "GitHub Action for npm" {
+  uses = "actions/npm@master"
   args = "ci"
-  runs = "npm"
-}
-
-action "Test code" {
-  uses = "docker://bycedric/ci-expo"
-  needs = ["Install dependencies"]
-  args = "run test-ci"
-  runs = "npm"
 }
