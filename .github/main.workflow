@@ -1,9 +1,10 @@
 workflow "Testing project" {
   on = "push"
-  resolves = ["GitHub Action for npm"]
+  resolves = ["Install dependencies"]
 }
 
-action "GitHub Action for npm" {
-  uses = "actions/npm@master"
+action "Install dependencies" {
+  uses = "bycedric/expo@master"
   args = "ci"
+  runs = "npm"
 }
