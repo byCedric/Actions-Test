@@ -4,7 +4,7 @@ workflow "Testing project" {
 }
 
 action "Install dependencies" {
-  uses = "bycedric/expo@master"
+  uses = "bycedric/ci-expo@master"
   args = "ci"
   runs = "npm"
 }
