@@ -1,5 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -23,6 +24,5 @@
     "expo-cli": "^2.6.13",
     "jest": "^23.6.0",
     "jest-expo": "^31.0.0"
-  },
-  "private": true
+  }
 }
