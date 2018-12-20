@@ -19,5 +19,5 @@ action "Login with Expo" {
 action "Publish to Expo" {
   uses = "bycedric/ci-expo/cli@master"
   needs = ["Login with Expo"]
-  runs = "sh -c 'ulimit -n'"
+  args = "publish"
 }
