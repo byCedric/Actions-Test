@@ -1,6 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
+  "name": "bycedric-action-test",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
