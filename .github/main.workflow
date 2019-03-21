@@ -10,14 +10,14 @@ action "Install dependencies" {
 }
 
 action "Login with Expo" {
-  uses = "./actions-cli/"
+  uses = "./action-cli/"
   secrets = ["EXPO_USERNAME", "EXPO_PASSWORD"]
   needs = ["Install dependencies"]
   args = "login --username $EXPO_USERNAME --password $EXPO_PASSWORD"
 }
 
 action "Publish to Expo" {
-  uses = "./actions-cli/"
+  uses = "./action-cli/"
   needs = ["Login with Expo"]
   args = "publish"
   secrets = ["EXPO_USERNAME"]
