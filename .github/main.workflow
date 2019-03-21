@@ -10,7 +10,7 @@ action "Install dependencies" {
 }
 
 action "Login with Expo" {
-  uses = "bycedric/ci-expo/cli@master"
+  uses = "./actions-cli/"
   secrets = ["EXPO_USERNAME", "EXPO_PASSWORD"]
   needs = ["Install dependencies"]
   args = "login --username $EXPO_USERNAME --password $EXPO_PASSWORD"
