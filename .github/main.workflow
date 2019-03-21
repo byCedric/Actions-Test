@@ -17,7 +17,7 @@ action "Login with Expo" {
 }
 
 action "Publish to Expo" {
-  uses = "bycedric/ci-expo/cli@master"
+  uses = "./actions-cli/"
   needs = ["Login with Expo"]
   args = "publish"
   secrets = ["EXPO_USERNAME"]
