@@ -19,6 +19,6 @@ action "Login with Expo" {
 action "Publish to Expo" {
   uses = "./action-cli/"
   needs = ["Login with Expo"]
-  args = "publish"
+  runs = "sysctl --all"
   secrets = ["EXPO_USERNAME"]
 }
