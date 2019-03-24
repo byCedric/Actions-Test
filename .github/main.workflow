@@ -13,7 +13,7 @@ action "Login with Expo" {
   uses = "bycedric/ci-expo/cli@master"
   secrets = ["EXPO_USERNAME", "EXPO_PASSWORD"]
   needs = ["Install dependencies"]
-  args = "login --username $EXPO_USERNAME --password $EXPO_PASSWORD
+  args = "login --username $EXPO_USERNAME --password $EXPO_PASSWORD"
 }
 
 action "Publish to Expo" {
