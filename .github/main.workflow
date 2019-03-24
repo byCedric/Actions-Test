@@ -10,15 +10,15 @@ action "Install dependencies" {
 }
 
 action "Login with Expo" {
-  uses = "./action-cli/"
+  uses = "docker://bycedric/ci-expo"
   secrets = ["EXPO_USERNAME", "EXPO_PASSWORD"]
   needs = ["Install dependencies"]
-  args = "login --username $EXPO_USERNAME --password $EXPO_PASSWORD"
+  args = "npx expo login --username $EXPO_USERNAME --password $EXPO_PASSWORD"
 }
 
 action "Publish to Expo" {
-  uses = "./action-cli/"
+  uses = "docker://bycedric/ci-expo"
   needs = ["Login with Expo"]
-  runs = "debug"
+  runs = "npx expo publish"
   secrets = ["EXPO_USERNAME"]
 }
