@@ -19,5 +19,5 @@ action "Publish to Expo" {
   uses = "docker://bycedric/ci-expo"
   needs = ["Install dependencies"]
   secrets = ["EXPO_USERNAME", "EXPO_PASSWORD"]
-  runs = "sh -c 'expo login -u $EXPO_USERNAME -p \'$EXPO_PASSWORD\' && npx expo publish'"
+  runs = "sh -c 'expo login -u $EXPO_USERNAME -p \"$EXPO_PASSWORD\" && npx expo publish'"
 }
